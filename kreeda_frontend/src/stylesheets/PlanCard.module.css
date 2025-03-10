@@ -1,0 +1,46 @@
+/* Plan Card Styling#303040 */
+.plan-card {
+    background-color: #222222;
+    border-radius: 16px;
+    padding: 40px 20px 20px 20px;
+    width: 300px; /* Adjust the width of the card */
+    text-align: center;
+    color: white;
+  }
+  
+  .plan-image {
+    width: 100px; /* Adjust size as per design */
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .plan-membership {
+    font-family: 'Poppins'; 
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .plan-starting {
+    font-family: 'Poppins'; 
+    color: #A5A4A1;
+    font-size: 18px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    text-align: left;
+  }
+  
+  .plan-cost {
+    font-family: 'Poppins';
+    font-size: 18px;
+    color: #A5A4A1;
+    margin-left: 10px;
+    text-align: left;
+  }
+  
+  .plan-cost-amount {
+    font-weight: bold;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+  

@@ -1,0 +1,242 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d0d0d;
+}
+
+.loader {
+  position: relative;
+  width: 200px; /* Increased size */
+  height: 200px; /* Increased size */
+  cursor: pointer;
+}
+
+.loader__bar {
+  position: absolute;
+  bottom: 0;
+  width: 24px; /* Increased size */
+  height: 60%; /* Adjusted to maintain proportions */
+  transform-origin: center bottom;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.loader__bar--1 {
+  left: 0;
+  transform: scale(1, 0.2);
+  background: blue;
+  animation: barUp1 4s infinite;
+  animation-play-state: paused;
+}
+
+.loader__bar--2 {
+  left: 30px; /* Increased spacing */
+  transform: scale(1, 0.4);
+  background: green;
+  animation: barUp2 4s infinite;
+  animation-play-state: paused;
+}
+
+.loader__bar--3 {
+  left: 60px; /* Increased spacing */
+  transform: scale(1, 0.6);
+  background: yellow;
+  animation: barUp3 4s infinite;
+  animation-play-state: paused;
+}
+
+.loader__bar--4 {
+  left: 90px; /* Increased spacing */
+  transform: scale(1, 0.8);
+  background: orange;
+  animation: barUp4 4s infinite;
+  animation-play-state: paused;
+}
+
+.loader__bar--5 {
+  left: 120px; /* Increased spacing */
+  transform: scale(1, 1);
+  background: red;
+  animation: barUp5 4s infinite;
+  animation-play-state: paused;
+}
+
+.loader__ball {
+  position: absolute;
+  bottom: 20px; /* Adjusted for larger size */
+  left: 0;
+  width: 24px; /* Increased size */
+  height: 24px; /* Increased size */
+  background: #fff;
+  border-radius: 100%;
+  animation: ball 4s infinite;
+  animation-play-state: paused;
+}
+
+.animate.loader__bar--1 {
+  animation-play-state: running;
+}
+
+.animate.loader__bar--2 {
+  animation-play-state: running;
+}
+
+.animate.loader__bar--3 {
+  animation-play-state: running;
+}
+
+.animate.loader__bar--4 {
+  animation-play-state: running;
+}
+
+.animate.loader__bar--5 {
+  animation-play-state: running;
+}
+
+.animate.loader__ball {
+  animation-play-state: running;
+}
+
+@keyframes ball {
+  0% {
+    transform: translate(0, 0);
+  }
+  5% {
+    transform: translate(20px, -32px); /* Adjusted for larger size */
+  }
+  10% {
+    transform: translate(30px, -20px); /* Adjusted for larger size */
+  }
+  17% {
+    transform: translate(46px, -48px); /* Adjusted for larger size */
+  }
+  20% {
+    transform: translate(60px, -40px); /* Adjusted for larger size */
+  }
+  27% {
+    transform: translate(76px, -68px); /* Adjusted for larger size */
+  }
+  30% {
+    transform: translate(90px, -60px); /* Adjusted for larger size */
+  }
+  37% {
+    transform: translate(106px, -88px); /* Adjusted for larger size */
+  }
+  40% {
+    transform: translate(120px, -80px); /* Adjusted for larger size */
+  }
+  50% {
+    transform: translate(120px, 0); /* Adjusted for larger size */
+  }
+  57% {
+    transform: translate(106px, -28px); /* Adjusted for larger size */
+  }
+  60% {
+    transform: translate(90px, -20px); /* Adjusted for larger size */
+  }
+  67% {
+    transform: translate(74px, -48px); /* Adjusted for larger size */
+  }
+  70% {
+    transform: translate(60px, -40px); /* Adjusted for larger size */
+  }
+  77% {
+    transform: translate(44px, -68px); /* Adjusted for larger size */
+  }
+  80% {
+    transform: translate(30px, -60px); /* Adjusted for larger size */
+  }
+  87% {
+    transform: translate(14px, -88px); /* Adjusted for larger size */
+  }
+  90% {
+    transform: translate(0, -80px); /* Adjusted for larger size */
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes barUp1 {
+  0% {
+    transform: scale(1, 0.5);
+  }
+  40% {
+    transform: scale(1, 0.2);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  90% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 0.2);
+  }
+}
+
+@keyframes barUp2 {
+  0% {
+    transform: scale(1, 0.6);
+  }
+  40% {
+    transform: scale(1, 0.4);
+  }
+  50% {
+    transform: scale(1, 0.8);
+  }
+  90% {
+    transform: scale(1, 0.8);
+  }
+  100% {
+    transform: scale(1, 0.4);
+  }
+}
+
+@keyframes barUp3 {
+  0% {
+    transform: scale(1, 0.8);
+  }
+  100% {
+    transform: scale(1, 0.6);
+  }
+}
+
+@keyframes barUp4 {
+  0% {
+    transform: scale(1, 0.9);
+  }
+  40% {
+    transform: scale(1, 0.8);
+  }
+  50% {
+    transform: scale(1, 0.4);
+  }
+  90% {
+    transform: scale(1, 0.4);
+  }
+  100% {
+    transform: scale(1, 0.8);
+  }
+}
+
+@keyframes barUp5 {
+  0% {
+    transform: scale(1, 1.2);
+  }
+  40% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.2);
+  }
+  90% {
+    transform: scale(1, 0.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

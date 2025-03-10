@@ -1,0 +1,113 @@
+/* General page background */
+body {
+    background-color: #1E1E1E;
+  }
+  
+  /* Fitness card styling */
+  .fitness-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2D2D2D;
+    width: 90vw;
+    margin:0px auto;
+    border-radius: 15px;
+    color: white;
+  }
+  .fitness-card:not(:last-child) {
+    margin-bottom: 40px; /* 40px gap between cards */
+  }
+  /* Layout for the content */
+  .card-content {
+    display: flex;
+    width: 100%; /* Ensure full width */
+  }
+  
+  /* Image container */
+  .card-image {
+    width: 45vw; /* 50% width for image */
+  }
+  
+  /* Text container */
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45vw; /* 50% width for text and buttons */
+    padding: 0px 20px; /* Adjust padding as needed */
+  }
+  
+  /* Card text */
+  .card-text {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: Abril Fatface;
+  }
+  
+  /* Button styling */
+  .hero-buttons .btn {
+    border-radius: 25px;
+    height: 51px;
+    padding: 16px 32px;
+    font-size: 1rem;
+    color: white;
+    border: 2px solid white;
+    white-space: nowrap;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .hero-buttons .btn-sign-up {
+    background: transparent;
+    padding: 10px 20px;
+  }
+  
+  .hero-buttons .btn-join-now {
+    background-color: #6966FF;
+    border: none;
+    padding: 16px 32px;
+  }
+  .hero-buttons .btn-join-now:hover {
+    background-color: #4f4ccc;
+    color: white;
+  }
+  /* Order classes for alternate layout */
+  .order-left {
+    order: 0; /* Image on the left */
+  }
+  
+  .order-right {
+    order: 1; /* Image on the right */
+  }
+  
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .fitness-card {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+    
+    .card-content {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center align for smaller screens */
+    }
+    
+    .card-image {
+        width: 100%; /* Image takes full width */
+        max-width: none; /* Remove max width limit */
+    }
+
+    .text-container {
+        width: 100%; /* Full width for text container */
+        align-items: center; /* Center text on smaller screens */
+    }
+
+    .card-text {
+        font-size: 25px; /* Adjust text size for smaller screens */
+    }
+    
+    .hero-buttons .btn {
+        margin: 5px 0; /* Adjust margin for buttons */
+    }
+}

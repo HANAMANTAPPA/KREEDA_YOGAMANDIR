@@ -1,0 +1,75 @@
+.gameWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    height: 40vh; /* Set height as 40% of the viewport */
+    width: 30vh; /* Set width as 40% of the viewport *//* Set border */
+    background-color: #1424d6;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  .gameContainer {
+    position: relative;
+    text-align: center;
+    height: 100%; /* Fit within the wrapper */
+    width: 100%;  /* Fit within the wrapper */
+  }
+  
+  .gameCanvas {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #4a148c;
+    box-shadow: 0 0 10px #7c4dff;
+    display: block;
+   
+    width: 99%; /* Adjust width to fit container */
+    height: 92%; /* Adjust height to leave room for score and button */
+  }
+  
+  .score {
+    color: #c3adc3;
+    font-size: 16px; 
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .dropButton {
+    padding: 5px 10px; 
+    background-color: #ddbcc7;
+    border: none;
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dropButton:hover {
+    background-color: #ff80ab;
+  }
+  
+  .message {
+    position: absolute;
+    font-size: 20px; /* Adjust font size to fit */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: floatUp 1s ease-out, colorChange 0.5s linear infinite;
+    opacity: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes floatUp {
+    0% { transform: translate(-50%, -50%); opacity: 1; }
+    50% { opacity: 1; }
+    100% { transform: translate(-50%, -100%); opacity: 0; }
+  }
+  
+  @keyframes colorChange {
+    0% { color: #ff4081; }
+    33% { color: #00bcd4; }
+    66% { color: #ffeb3b; }
+    100% { color: #ff4081; }
+  }
+  

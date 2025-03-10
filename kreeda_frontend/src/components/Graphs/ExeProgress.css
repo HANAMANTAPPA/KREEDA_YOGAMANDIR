@@ -1,0 +1,63 @@
+/* 
+.exercise-progress-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .exercise-progress-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8884d8;
+    color: white;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  button.active {
+    background-color: #555;
+  }
+  
+  button:hover {
+    background-color: #666;
+  }
+  
+  .recharts-tooltip-wrapper .recharts-default-tooltip {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .recharts-legend-wrapper {
+    font-family: 'Arial', sans-serif;
+    color: #555;
+  }
+  
+  .recharts-text {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .recharts-cartesian-axis-tick-value {
+    font-size: 12px;
+  }
+  
+   */

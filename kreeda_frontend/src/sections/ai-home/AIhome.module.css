@@ -1,0 +1,77 @@
+.ai-home {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    padding: 60px;
+    text-align: center;
+}
+
+.ai-home h2 {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ai-home p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #efede8a6;
+    text-align:center
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 25%; /* Default width for larger screens */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+
+/* Tablet view (reduce image size slightly) */
+@media (max-width: 768px) {
+    .ai-home{
+        padding:60px 10px;
+    }
+    .gallery{
+        gap:10px;
+    }
+    .gallery img {
+        width: 30%; /* Images take up a bit more space on tablet view */
+
+    }
+    .ai-home h2 {
+        font-size: 30px;
+    }
+    .ai-home p {
+        font-size: 18px; /* Reduce font size for questions on mobile */
+    }
+
+}
+
+/* Mobile view (further reduce image size) */
+@media (max-width: 480px) {
+    .ai-home{
+        padding:60px 10px;
+    }
+    .gallery{
+        gap:10px;
+    }
+    .gallery img {
+        width: 45%; /* Further reduce image size on mobile, keeping the original layout */
+    }
+    .ai-home h2 {
+        font-size: 30px;
+    }
+    .ai-home p {
+        font-size: 18px; /* Reduce font size for questions on mobile */
+    }
+}

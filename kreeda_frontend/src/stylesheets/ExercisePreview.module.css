@@ -1,0 +1,210 @@
+.exercisePreviewContainer {
+  background-color: #222;
+  display: flex;
+  width: 100vw;
+  min-height: 100vh; /* Changed from height to min-height */
+  flex-direction: column;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.previewContainer {
+  width: 80%;
+  margin-left: 17%;
+  padding: 20px;
+}
+
+.exercisePreviewHeadingContainer {
+  margin-bottom: 2%;
+}
+
+.exerciseHeading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem; /* Proportional font size */
+  color: #ffffff;
+}
+
+.exerciseSubheading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem; /* Proportional font size */
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: #b4b4b4;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+}
+
+/* User Info */
+.userInfo img {
+  width: 40px;
+  height: 40px;
+}
+
+.userName {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem; /* Proportional font size */
+  color: #ffffff;
+}
+
+.userDesignation {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem; /* Proportional font size */
+  color: #b4b4b4;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: auto; /* Remove fixed height */
+}
+
+.descriptionContainer {
+  width: 80%;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.mainTitle {
+  font-family: 'Poppins';
+  font-size: 4.25rem; /* Proportional font size */
+  font-weight: 600;
+  color: #fff;
+}
+
+.description {
+  font-family: 'Poppins';
+  font-size: 1rem; /* Proportional font size */
+  font-weight: 400;
+  line-height: 1.8rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.start-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.125rem; /* Proportional font size */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.play-icon {
+  margin-left: 10px;
+}
+
+.imageContainer {
+  width: 30%;
+  margin-right: 15%;
+  display: flex;
+  align-items: center;
+}
+
+.exerciseImage {
+  width: 100%;
+  height: 100%; /* Maintain aspect ratio */
+}
+
+.relatedExercises {
+  margin-top: 40px;
+}
+
+.relatedExercises h2 {
+  font-size: 1.5rem; /* Proportional font size */
+  color: #ffffff;
+  margin-bottom: 2%;
+}
+
+.exercise {
+  min-width: 150px;
+}
+
+.relatedExerciseImage {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.exercisesScroll {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scroll effect */
+  padding-bottom: 10px;
+}
+
+.exercisesScroll::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit-based browsers */
+}
+
+.exercisesScroll {
+  -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer/Edge */
+  scrollbar-width: none;  /* Hide scrollbar in Firefox */
+}
+
+/* Responsive design for proportional scaling */
+
+/* 768px and below */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2.75rem; /* Scale down font size */
+  }
+  .imageContainer{
+    display:flex;
+    align-items: center;
+  }
+  .exerciseImage {
+    width: 80%;
+    height:80%;
+  }
+  
+  .previewContainer {
+    width: 80%;
+    margin-left: 17%;
+  }
+  
+  .descriptionContainer {
+    width: 100%;
+  }
+}
+
+/* 576px and below (Mobile screens) */
+@media (max-width: 576px) {
+  .mainTitle {
+    font-size: 2rem; /* Further scale down font size */
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageContainer {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .descriptionContainer {
+    width: 100%;
+  }
+
+  .exerciseImage {
+    width: 100%;
+    height: 30%;
+    margin: 0 auto;
+  }
+}

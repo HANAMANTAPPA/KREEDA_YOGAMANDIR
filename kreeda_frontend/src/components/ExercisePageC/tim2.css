@@ -1,0 +1,104 @@
+/* Common styles for the outer container */
+.outer-main {
+  position: fixed;
+  z-index: 1000;
+}
+
+/* Score circle at the top-right */
+.outer-main.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+/* Timer circle at the bottom-right */
+.outer-main.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Circle styling */
+.circle-1 {
+  width: 8vw; /* Responsive size */
+  height: 8vw;
+  max-width: 120px; /* Limit maximum size */
+  max-height: 120px;
+  min-width: 60px; /* Prevent it from getting too small */
+  min-height: 60px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border: 3px solid #cccccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+
+/* Progress circle inside the main circle */
+.progress-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  background: conic-gradient(var(--color) var(--progress), white 0deg 360deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner smaller circle */
+.circle-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text inside the circle */
+.txt-1 {
+  text-align: center;
+  font-size: 2vw;
+  max-font-size: 50px;
+  font-weight: bold;
+  color: #565555;
+  text-align: center;
+  animation-name: scaleChange;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .circle-1 {
+    width: 12vw;
+    height: 12vw;
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .txt-1 {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .circle-1 {
+    width: 14vw;
+    height: 14vw;
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .txt-1 {
+    font-size: 5vw;
+  }
+}

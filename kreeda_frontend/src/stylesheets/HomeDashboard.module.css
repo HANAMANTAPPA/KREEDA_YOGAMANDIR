@@ -1,0 +1,409 @@
+.home-dashboard {
+  display: flex;
+  background-color: #222; /* Background color for the main page */
+}
+
+/* Dashboard section */
+.dashboard {
+  width: 16%; /* Default width for small screens (only icons) */
+  background-color: #2F2F2F;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  height: 100vh;
+  position: fixed;
+  left: 0px;
+  transition: width 0.3s ease; /* Smooth transition when expanding */
+}
+
+
+
+
+.dashboard-options li {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dashboard-options li:hover {
+  background-color: #404040;
+}
+
+.dashboard-options li span {
+  color: inherit;
+  display: none;
+  margin-left: 10px;
+}
+
+.dashboard-options li svg, .dashboard-options li .fa-icon {
+  color: inherit;
+  margin-right: 10px;
+}
+
+.dashboard:hover .dashboard-options li span,
+.dashboard:hover .logo-section h2,
+.dashboard:hover .logoutT {
+  display: block;
+  opacity: 1;
+}
+
+.navlink {
+  color: #727272;
+  text-decoration: none;
+}
+
+.active {
+  color: #ffffff !important; /* White color for active item */
+  text-decoration: none;
+}
+
+
+
+
+
+
+/* On hover, expand the dashboard and show the labels */
+.dashboard:hover {
+  width: 50%; /* Expand width when hovering on smaller screens */
+}
+.logo-section{
+  display:flex;
+  align-items: start;
+}
+.logo-section h2 {
+  margin-left: 2px;
+  font-size:24px;
+}
+
+/* When hovering over the dashboard, show text labels */
+.dashboard:hover .dashboard-options li span {
+  display: block; /* Show labels on dashboard hover */
+  opacity: 1; /* Make the label visible */
+}
+.dashboard:hover .logo-section h2,.dashboard:hover .divider ,.dashboard:hover .logoutT {
+  display: block !important;
+  align-items: center;
+  opacity: 1; /* Make visible on hover */
+}
+.dashboard-options {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.dashboard-options li {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  justify-content: left; /* Center the icons by default */
+  transition: background-color 0.2s;
+  
+}
+
+.dashboard-options li img {
+  height: 24px;
+  margin-right: 10px;
+}
+.dashboard-options .iconStyle{
+  margin-right: 8px;
+  margin-top:5px;
+}
+.dashboard-options li a{
+  display:flex;
+  color:#FFFFFF;
+  text-decoration: none;
+}
+.dashboard-options li span {
+  display: none; /* Hide the labels by default */
+  margin-left: 10px; /* Add space between icon and label */
+}
+
+.dashboard-options li:hover {
+  background-color: #404040;
+}
+.dashboard:hover .dashboard-options li span {
+  display: block !important; /* Force display block */
+  opacity: 1;
+  /* width:100%; */
+}
+/* Main content section for other parts */
+.main-content {
+  flex:1;
+  /* Occupies the remaining 80% of the page width */
+  background-color: #222;
+  margin-left: 16%; 
+  padding: 10px 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Additional styling for the content */
+.activity-tracking {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+.fire-icon {
+  width: 30px;
+  height: 31px;
+  margin-right: 10px; /* Space between icon and text */
+  margin-bottom: 35px;
+}
+.activity-text {
+  flex: 1; /* Take available space */
+}
+.activity-text h1 {
+  font-family: 'Poppins',sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0; /* Remove default margin */
+}
+
+.activity-text p {
+  color: #B4B4B4;
+  font-family: 'Poppins',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  text-transform: capitalize;
+}
+.profile-section {
+  display: flex;
+  align-items: center;
+  position:relative;
+}
+.profile-pic {
+  width: 40px; /* Size for profile picture */
+  height: 40px;
+  border-radius: 50%; /* Make it round */
+  margin-left: 20px; /* Space between text and image */
+}
+
+.user-name {
+  color: #FFFFFF; /* Text color for the user name */
+  font-family: 'Poppins',sans-serif;
+  font-size: 14px;
+  margin-left: 10px; /* Space between profile pic and name */
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 2px;
+}
+
+.logo2 {
+  margin-right: 4px;
+  /* width: 28.102px; */
+  height: 50px;
+  aspect-ratio: 500/194;
+}
+h2 {
+  font-family:Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.divider {
+  width: 80%;
+  border: 1px solid white;
+  margin: 20px 0;
+}
+.logoutSec{
+  width:20%;
+  
+  position:fixed;
+  bottom:7px;
+  text-align: center;
+  cursor:pointer;
+}
+.logoutC{
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the logout icon and text */
+  color: white; /* Text color for logout */
+}
+
+.logoutI{
+  width: 24px; /* Adjust size as needed */
+  margin-right: 10px; /* Space between icon and text */
+}
+.logout-divider{
+  width:200px;
+  margin:10px 0px;
+}
+/* .dashboard:hover .dashboard-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */
+/* On larger screens, the full dashboard is visible */
+@media (min-width: 768px) {
+  .home-dashboard{
+    height:100vh;
+    width:100vw;
+  }
+  .dashboard {
+    width: 15%; /* Full width */
+    
+  }
+  .dashboard:hover {
+    width: 15%; /* Expand width when hovering on smaller screens */
+  }
+  .dashboard-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dashboard-options li span {
+    display: block; /* Show labels by default on larger screens */
+    width:100px;
+  }
+}
+@media (min-width:1800px){
+  .home-dashboard{
+    height:100vh;
+    width:100vw;
+  }
+  .dashboard {
+    width: 15%; /* Full width */
+    
+  }
+  .dashboard:hover {
+    width: 15%; /* Expand width when hovering on smaller screens */
+  }
+  .dashboard-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dashboard-options li span {
+    display: block; /* Show labels by default on larger screens */
+    width:150px;
+    font-size:24px;
+  }
+  .dashboard-options li img {
+    height:24px;
+  }
+  .logo-section h2 {
+    margin-left: 6px;
+    font-size:36px;
+  }
+  .logo-section .logo2{
+    height:36px;
+    margin-bottom: 10px;
+  }
+  .logoutI{
+    width:36px;
+  }
+  .logoutT{
+    font-size:24px;
+  }
+  .activity-text h1{
+    font-size:30px;
+  }
+  .fire-icon {
+    width: 36px;
+    height: 37px;
+  }
+  .activity-text p {
+    font-size: 20px;
+  }
+  .profile-pic {
+    width: 50px; /* Size for profile picture */
+    height: 50px;
+  }
+  
+  .user-name {
+    font-size: 24px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .main-content {
+    margin-left: 15%; 
+    /* flex:1; */
+    height:100vh;
+    padding: 10px 40px 10px 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bottom-sections {
+    display: flex;
+    justify-content: space-evenly;
+    gap:20px;
+  }
+  .logout-divider{
+    width: 87%;
+  }
+  .leaderboard-section {
+    /* flex: 1; Adjust this based on the desired width */
+  }
+  
+  .fitness-section {
+    flex: 1; /* Adjust this to match the width of leaderboard */
+  
+  }
+}
+.profile-details {
+  background-color: #2F2F2F;
+  position:absolute;
+  top:10%;
+  right:1%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  width: 250px;
+  position: absolute; /* Adjust based on your layout */
+  z-index: 10;
+}
+
+.profile-details-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-section {
+  cursor: pointer;
+}
+
+.profile-section:hover {
+  opacity: 0.8;
+}
+.profilePicture{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:3%;
+}
+.profileContent{
+  margin-top: 5%;
+}
+.profile-details p{
+  color: #FFFFFF;
+  display:flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  /* margin-bottom: 0.5rem!important; */
+}
+.saveButton{
+  padding:2% 5%;
+  background-color: #6966FF;
+  color: #FFFFFF;
+  border-radius: 25px;
+  border:none;
+}

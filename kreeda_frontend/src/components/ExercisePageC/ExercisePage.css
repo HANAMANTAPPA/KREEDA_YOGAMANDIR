@@ -1,0 +1,25 @@
+.exebody {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  /* overflow: hidden; */
+  margin: 0%;
+  /* display: flex; */
+  /* justify-content: center; */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  align-items: center;
+  /* font-family: "Montserrat Alternates"; */
+  /* color: aliceblue; */
+  /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
+  display: flex;
+  position: relative;
+  background-color: #1E1E1E;
+  background-image: 
+      linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px), /* Horizontal mesh */
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px); /* Vertical mesh */
+  background-size: 20px 20px  !important;/* Adjust grid size */
+  /* background: url("https://s3-us-west-1.amazonaws.com/crm-production-1/statics/1626991446.07968521-032-06FitnessMovementRoom.jpg")
+    no-repeat center center fixed; */
+  background-size: cover;
+}

@@ -1,0 +1,59 @@
+/* * {
+  /* box-sizing: border-box; */
+/* } */ 
+/* body {
+  margin: 0;
+  padding: 0;
+  background: #212121;
+  font-family: sans-serif;
+} */
+.containerBB {
+  width: 100%;
+  /* max-width: 400px; */
+  margin: 0 auto;
+}
+.animationContainerBB {
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  background-image: url("https://user-images.githubusercontent.com/53656529/99234251-94fc5380-27f4-11eb-8f7a-f76362f97cc7.png");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: top center;
+}
+.basketBall {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -14px;
+  background-image: url("https://user-images.githubusercontent.com/53656529/99234243-92016300-27f4-11eb-8d09-34282d345660.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+}
+@keyframes ball-fall {
+  0% {
+    top: 100%;
+  }
+  50% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+.backgroundBB {
+  height: 300px;
+  width: 300px;
+  padding: 16px 0 56px;
+  border-radius: 6px;
+  background: linear-gradient(
+    to bottom,
+    #05071c 0%,
+    #72787c 90%,
+    #0d0e21 90%,
+    #363738 100%
+  );
+}

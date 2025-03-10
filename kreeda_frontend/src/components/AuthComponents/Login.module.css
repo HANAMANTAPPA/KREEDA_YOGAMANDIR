@@ -1,0 +1,205 @@
+.container {
+    display: flex;
+    flex-direction: row; /* Keep row layout for larger screens */
+    height: 100vh;
+    width: 100vw;
+    background-color: #1e1e1e;
+    overflow-y: hidden;
+}
+
+.imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signinImage {
+    max-width: 100%;
+    max-height: 100%; /* Allow the image to fill its container */
+    object-fit: contain;
+    padding-top: 2%; /* Reduced padding for better adaptability */
+    padding-bottom: 2%;
+}
+
+/* Reduced the size of the formContainer */
+.formContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #1e1e1e;
+    height: auto;
+    width: 40%; /* Reduced width to make the form container smaller */
+    margin: 5%; /* Maintain margin for top and bottom spacing */
+}
+
+.heading {
+    margin-top: 10%;
+    color: #ffffff;
+    font-family: "Abril Fatface";
+    font-size: 2rem; /* Reduced font size */
+    font-weight: 800;
+    text-align: left;
+    width: 100%;
+}
+
+.text {
+    margin-bottom: 8px; /* Reduced margin for more compact layout */
+    font-size: 0.875rem; /* Reduced font size */
+    font-weight: 400;
+    color: #BDBDBD;
+    max-width: 60%; /* Reduced width to align with the smaller container */
+    text-align: left;
+}
+
+.highlight {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.loginform {
+    /* margin-top: 50px; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px; /* Reduced max-width for a smaller form */
+}
+
+.label {
+    margin-bottom: 4px; /* Reduced margin for a tighter layout */
+    font-size: 0.75rem; /* Reduced font size */
+    color: #cccccc;
+    text-align: left;
+}
+
+.input {
+    margin-top: 0;
+    margin-bottom: 0; /* Reduced margin between fields */
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    border-radius: 4px; /* Adjusted corner rounding */
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.button {
+    padding: 8px; /* Reduced padding for a smaller button */
+    background-color: #6200ee;
+    border: none;
+    color: white;
+    border-radius: 30px; /* Slightly reduced border-radius */
+    cursor: pointer;
+    font-size: 0.875rem; /* Reduced font size */
+    margin: 0;
+    width: 100%; /* Full width for the button */
+}
+
+.button:hover {
+    background-color: #3700b3;
+}
+
+.linksline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: small;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.signuplink {
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    margin-left: auto;
+}
+
+.signuplink:hover {
+    text-decoration: underline;
+}
+
+.errorEmail, .errorPassword {
+    color: red;
+    font-size: x-small;
+    margin: 0; /* Ensure there’s no margin */
+    padding: 0; /* Ensure no padding is added */
+    line-height: 1; /* Adjust line height to remove vertical space */
+  }  
+
+/* Media Queries for Responsiveness */
+@media (max-width: 452px) {
+    .container {
+        flex-direction: column;
+        overflow: visible;
+        background-color: #1e1e1e;
+        height: auto;
+    }
+
+    .imageContainer {
+        height: 40%; /* Adjusted imageContainer height for small screens */
+        width: 100%;
+    }
+
+    .signinImage {
+        height: auto;
+        width: 80%;
+    }
+
+    .formContainer {
+        width: auto; /* Ensure the form container is responsive on smaller screens */
+        margin-top: 0;
+        align-items: center;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 1.75rem; /* Adjust heading size for smaller screens */
+    }
+
+    .text {
+        font-size: 0.75rem; /* Adjust text size */
+        max-width: 80%; /* Expand the width for readability */
+        text-align: center; /* Center text */
+    }
+
+    .form {
+        max-width: 90%;
+    }
+
+    .input, .button {
+        width: 100%; /* Full width for input and button */
+        max-width: 100%; /* Remove fixed width for smaller screens */
+    }
+
+    .button {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.5rem; /* Adjust heading size for very small screens */
+        height: auto;
+    }
+
+    .text {
+        font-size: 0.75rem; /* Adjust text size */
+    }
+
+    .form {
+        max-width: 95%; /* Use almost full width for form */
+    }
+
+    .input, .button {
+        padding: 6px; /* Further reduced padding */
+    }
+}

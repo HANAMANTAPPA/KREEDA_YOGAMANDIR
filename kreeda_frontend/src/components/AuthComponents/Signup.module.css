@@ -1,0 +1,102 @@
+.signupContainer {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #181818;
+    overflow: hidden;
+}
+
+.imageSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageSection img {
+    max-width: 100%;
+    max-height: 100%; /* Allow the image to fill its container */
+    object-fit: contain;
+    padding-top: 2%; /* Reduced padding for better adaptability */
+    padding-bottom: 2%;
+}
+
+.formSection {
+    flex: 1; /* Take half the screen */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Center the form vertically */
+    height: 70%; /* Set height to 50% of the parent to be half of the image section */
+    margin: auto 10%; /* Center the form section within the container */
+}
+
+h2 {
+    color: #ffffff;
+    font-family: "Abril Fatface";
+    font-size: 2rem; /* Reduced font size */
+    font-weight: 800;
+    text-align: left;
+}
+
+p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #BDBDBD;
+    text-align: left; /* Center the paragraph */
+}
+
+span {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Center form elements vertically */
+    width: 100%; /* Full width of the form section */
+    max-width: 400px; /* Set maximum width for form */
+    margin: 0; /* Center form horizontally */
+    gap: 10px; /* Space between form elements */
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+
+/* New styles for side-by-side fields */
+.fieldRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0; /* Add space below the row */
+}
+
+.fieldRow .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldRow .field:first-child {
+    margin-right: 10px; /* Space between the two fields */
+}
+
+.fieldRow .field label {
+    margin-bottom: 0;
+}
+
+.fieldRow .field input {
+    margin-bottom: 0; 
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: small;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,44 @@
+.archeryContainer {
+  margin: 0;
+  background: #222;
+  padding: 40px;
+  margin: 0px;
+  height: 40vh; /* Adjusted container height */
+  width: 100vh;  /* Adjusted container width */
+  border: 10px solid black;
+  position: relative;
+}
+
+.gameSvg {
+  width: 120%;
+  height: 50%;
+  position: fixed;
+  top: 400px;
+  left: -400px;
+}
+
+.tallyContainer {
+  position: absolute;
+  top: -1500px;
+  left: 0px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+
+
+.perfectGoal {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  color: rgb(133, 118, 118);
+  font-family: sans-serif;
+  font-size: 20px;
+  text-align: center;
+  opacity: 0;
+}
+
+
+

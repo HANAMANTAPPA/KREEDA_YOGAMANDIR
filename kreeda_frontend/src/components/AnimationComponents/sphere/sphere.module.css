@@ -1,0 +1,58 @@
+/* CSS for Ball */
+.ball {
+  --s: -1500px; /* Further decreased size to fit more comfortably */
+  --c: red; /* The color */
+  --progress: 0; /* Progress of filling */
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  overflow: hidden;
+  background: radial-gradient(at 36% 45%, #fff, 80%, #ccc); 
+  box-shadow: calc(var(--s) / 8) calc(var(--s) / 8) calc(var(--s) / 8) calc(var(--s) / -8) #0009;
+  transition: box-shadow 0.5s;
+}
+
+.filled {
+  box-shadow: 0 0 20px 10px var(--c);
+}
+
+.ball:before {
+  content: "";
+  grid-area: 1 / 1;
+  background: radial-gradient(circle at top, var(--c), #000);
+  mix-blend-mode: multiply;
+  -webkit-mask: linear-gradient(#000 0 0) bottom no-repeat;
+  -webkit-mask-size: 100% var(--progress);
+}
+
+.ball:after {
+  border-radius: 50%;
+  z-index: 1;
+  width: 30%; /* Adjusted width */
+  aspect-ratio: 1;
+  margin: auto;
+  background-image: linear-gradient(var(--c) 0 0);
+  background-blend-mode: multiply;
+  transform: translateY(calc(var(--s) / 2)) rotateX(78deg);
+  background-color: #333;
+  animation: none;
+}
+
+/* CSS for Container */
+.container {
+  margin: 10px;
+  height: 40vh; /* Adjusted container height */
+  width: 40vh;  /* Adjusted container width */
+  border: 1px solid black;
+  opacity: 1;
+  border-radius: 5px;
+  position: relative;
+  display: grid;
+  place-content: center;
+  align-items: center;
+  grid-auto-flow: column;
+  gap: 0px; /* Adjusted gap between balls */
+    background: #737070; /* Dark background outside the balls */
+  
+}

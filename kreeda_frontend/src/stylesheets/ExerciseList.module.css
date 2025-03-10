@@ -1,0 +1,291 @@
+.exerciseListContainer {
+    background-color: #222;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .exerciseListContent {
+    width: 100%;
+    margin-left: 17%;
+    padding: 10px 20px;
+  }
+  @media (max-width: 1200px) {
+    .exerciseListContent {
+      margin-left: 19%; /* Increase margin-left for smaller screens */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .exerciseListContent {
+      margin-left: 24%; /* Further adjust margin for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .exerciseListContent {
+      margin-left: 17%; /* Further adjust margin for smaller screens */
+      padding:5px 20px;
+    }
+
+    .imageGrid{
+      max-height: 72vh!important;
+    }  
+  }
+  /* Typography for Heading and Subheading */
+  .exerciseListHeading {
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ffffff;
+  }
+  
+  .exerciseListSubheading {
+    font-family: 'Poppins',sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+    color: #b4b4b4;
+  }
+  
+  .userInfo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .users {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* User Info */
+  .userInfo img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .userName {
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  .userDesignation {
+    font-family: 'Poppins',sans-serif;
+    font-size: 14px;
+    color: #b4b4b4;
+  }
+  
+/* Image Grid */
+.imageGrid {
+    display: grid;
+    /* grid-template-columns: repeat(7, 1fr); Force 7 images per row */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px; /* Eliminate gaps between the images */
+    max-height: 75vh;
+    overflow: auto; /* Allow scrolling if needed */
+    margin-top: 2px;
+    }
+    /* Add this for the image card positioning */
+.imageCard {
+    position: relative;
+    text-align: center;
+    padding: 0px 2px;
+    background-color: #ffffff;
+    cursor: pointer;
+    width:85%;
+    height:23vh;
+  }
+  
+  .image {
+    width: auto;
+    height: 23vh;
+    object-fit:fill;
+  }
+  
+  /* Overlay that covers 1/3 to 1/4 of the image */
+  .imageOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:35%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  .imageOverlay:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Left section with title and subtitle */
+  .imageInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .imageTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .imageSubtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #fff;
+    margin-top: 0px;
+  }
+  
+    .startButton {
+    background-color: #6966FF;
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.startButton:hover {
+    background-color: #5753d6;
+}
+   
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    .pageButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 16px; /* Rectangle shape with a bit of padding */
+      margin: 0 4px;
+      border: none;
+      border-radius: 8px; /* Slightly rounded edges */
+      background-color: transparent;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .pageButton:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .activePage {
+      background-color: #404040; /* New background color for the selected page */
+      color: #ffffff;
+    }
+    
+    .navButton {
+      display: flex;
+      align-items: center;
+      background-color: transparent; /* Same background for nav buttons */
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    
+    .navButton:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .ellipsis {
+      color: #ffffff;
+      margin: 0 4px;
+    }/* Default popup style */
+.exerciseListPopup {
+  position: absolute;
+  bottom: 0%;
+  left: 135%;
+  transform: translateX(-50%);
+  background-color: #2F2F2F;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: fit-content;
+  transition: opacity 3s ease, transform 3s ease;
+}
+
+/* Special style for the first 3 images */
+.exerciseListPopupFirstThree {
+  position: absolute;
+  top: 65%;
+  left: 125%;
+  transform: translateX(-50%);
+  background-color: #2F2F2F;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: fit-content;
+  transition: opacity 3s ease, transform 3s ease;
+}
+
+/* Special style for the 5th (index 4) and 3rd (index 2) images */
+.exerciseListPopupSpecial {
+  position: absolute;
+  top: 100%;
+  left: 70%;
+  transform: translateX(-50%);
+  background-color: #2F2F2F;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: fit-content;
+  transition: opacity 3s ease, transform 3s ease;  
+}
+.exerciseListPopupLastImage{
+  position: absolute;
+  top: 0%;
+  right: 65%;
+  transform: translateX(-50%);
+  background-color: #2F2F2F;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: fit-content;
+  transition: opacity 3s ease, transform 3s ease;
+}
+/* Example list styling for popup */
+/* .exerciseListPopup ul {
+  list-style-type: none;
+  padding: 0;
+} */
+
+.exerciseListPopup .exerciseListPopupFirstThree .exerciseListPopupSpecial ol li {
+  font-size: 12px;
+  padding: 4px 0;
+}

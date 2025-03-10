@@ -1,0 +1,180 @@
+.loader {
+  background: linear-gradient(135deg, #3b2667 10%, #bc78ec 100%) no-repeat;
+  height: 40vh;
+  width: 40vh; 
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin {
+  100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  0%, 15%, 100% {
+      transform: scale(0.95); /* Reduced scale */
+  }
+  5% {
+      transform: scale(1.14); /* Reduced scale */
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 10rem; /* Further reduced size */
+  height: 10rem; /* Further reduced size */
+  border-radius: 50%;
+  margin: 2em auto 0;
+  filter: url("#goo");
+}
+
+.wrapper > * {
+  display: block;
+  position: absolute;
+  width: 2rem; /* Further reduced size */
+  height: 2rem; /* Further reduced size */
+  left: 125px;
+  top: 40px;
+  align-items: center;
+}
+
+.wrapper > *:nth-of-type(1) {
+  transform: rotate(0deg) translate(5rem) rotate(0deg); /* Reduced translate distance */
+}
+
+.wrapper > *:nth-of-type(1) > .bubble {
+  animation: grow 4s ease infinite;
+  animation-delay: -0.1s;
+}
+
+.wrapper > *:nth-of-type(2) {
+  transform: rotate(45deg) translate(5rem) rotate(-45deg);
+}
+
+.wrapper > *:nth-of-type(2) > .bubble {
+  animation: grow 4s ease infinite;
+  animation-delay: 0.4s;
+}
+
+.wrapper > *:nth-of-type(3) {
+  transform: rotate(90deg) translate(5rem) rotate(-90deg);
+}
+
+.wrapper > *:nth-of-type(3) > .bubble {
+  animation: grow 4s ease infinite;
+  animation-delay: 0.9s;
+}
+
+.wrapper > *:nth-of-type(4) {
+  transform: rotate(135deg) translate(5rem) rotate(-135deg);
+}
+
+.wrapper > *:nth-of-type(4) > .bubble {
+  animation: grow 4s ease infinite;
+  animation-delay: 1.4s;
+}
+
+.wrapper > *:nth-of-type(5) {
+  transform: rotate(180deg) translate(5rem) rotate(-180deg);
+}
+
+.wrapper > *:nth-of-type(5) > .bubble {
+  animation: grow 4s ease infinite;
+  animation-delay: 1.9s;
+}
+
+.wrapper > *:nth-of-type(6) {
+  transform: rotate(225deg) translate(5rem) rotate(-225deg);
+}
+
+.wrapper > *:nth-of-type(6) > .bubble {
+  animation: grow 4s ease infinite;
+  animation-delay: 2.4s;
+}
+
+.wrapper > *:nth-of-type(7) {
+  transform: rotate(270deg) translate(5rem) rotate(-270deg);
+}
+
+.wrapper > *:nth-of-type(7) > .bubble {
+  animation: grow 4s ease infinite;
+  animation-delay: 2.9s;
+}
+
+.wrapper > *:nth-of-type(8) {
+  transform: rotate(315deg) translate(5rem) rotate(-315deg);
+}
+
+.wrapper > *:nth-of-type(8) > .bubble {
+  animation: grow 4s ease infinite;
+  animation-delay: 3.4s;
+}
+
+.bubbleWrap {
+  max-width: 30%;
+}
+
+.bubbleWrap .bubble {
+  width: 76%; /* Further reduced size */
+  height: 76%; /* Further reduced size */
+  border-radius: 50%;
+  background: #62baf3;
+}
+
+.satWrap {
+  animation: spin 4s linear infinite;
+}
+
+.satWrap .sat {
+  width: 1.425em; /* Further reduced size */
+  height: 1.425em; /* Further reduced size */
+  background: #88cbf7;
+  border-radius: 50%;
+  margin-left: 5.225em; /* Adjusted margin */
+  box-shadow: 0px 0px 50px -4px #bce4ff;
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+.resumed {
+  animation-play-state: running;
+}
+
+.wrapper .bubbleWrap .bubble {
+  animation: grow 4s ease infinite paused;
+}
+
+.wrapper .satWrap {
+  animation: spin 4s linear infinite paused;
+}
+
+.wrapper.resumed .bubbleWrap .bubble {
+  animation: grow 4s ease infinite running;
+}
+
+.wrapper.resumed .satWrap {
+  animation: spin 4s linear infinite running;
+}
+
+.number-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem; /* Adjusted font size */
+  color: white;
+  z-index: 10;
+}
+
+.wrapper {
+  transition: transform 0.5s ease;
+}

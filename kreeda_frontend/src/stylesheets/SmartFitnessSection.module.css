@@ -1,0 +1,97 @@
+/* src/stylesheets/SmartFitnessSection.module.css */
+
+.smartFitnessSection {
+  background-color: #1E1E1E;
+  padding: 60px 80px;
+  color: white;
+}
+@media (max-width: 992px) {
+  .smartFitnessSection {
+    padding: 60px 20px;
+  }
+}
+.smartFitnessContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:10%;
+}
+
+.fitnessImageContainer {
+  display: flex;
+  gap: 5%;
+  flex: 1;
+}
+
+.fitnessImage {
+  max-width: 50%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.fitnessText {
+  flex: 1;
+  padding-left: 30px;
+  text-align: left;
+  color: #efede8a6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+}
+
+.fitnessHeading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.highlight {
+  background-image: linear-gradient(to right, #8E44AD, #B57EDC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fitnessFeatures {
+  list-style-position: inside;
+  padding-left: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.fitnessFeatures li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .smartFitnessContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fitnessImageContainer {
+    justify-content: center;
+  }
+
+  .fitnessImage {
+    object-fit: cover;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  .fitnessText {
+    padding-top: 18px;
+    padding-left: 0;
+  }
+
+  .fitnessHeading {
+    font-size: 30px;
+    padding-left: 15px;
+  }
+}
+
+.fitnessFeatures li::marker {
+  margin-left: 0;
+}

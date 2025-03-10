@@ -1,0 +1,139 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container1 {
+    min-height: 10vh;
+    display: grid;
+    place-items: center;
+    background: black;
+    overflow: hidden;
+    height: 40vh; /* Increased height */
+    width: 40vh;  /* Increased width */
+}
+
+.sceneContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    perspective-origin: top center;
+}
+
+.scene {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    transform-style: preserve-3d;
+    transform: rotateX(20deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.originalLayer {
+    z-index: 1;
+}
+
+.staticLayer {
+    z-index: 1;
+    transform: rotateX(20deg) translateY(60px); /* Adjusted translateY for increased scale */
+    pointer-events: none;
+}
+
+.grid, .grid2 {
+    width: 100%;
+    max-width: 200px; /* Increased width */
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    transform-style: preserve-3d;
+    transform: rotateX(70deg) rotateZ(45deg);
+}
+
+.square {
+    position: relative;
+    background: #4e819f;
+    transform-style: preserve-3d;
+}
+
+.grid i, .grid2 i {
+    position: absolute;
+    display: block;
+    width: 60px; /* Increased width */
+    height: 100%;
+    background: #4e819f;
+}
+
+.grid i:nth-of-type(1), .grid2 i:nth-of-type(1) {
+    transform: rotateY(90deg);
+    transform-origin: left;
+    background: #343a8f;
+}
+
+.grid i:nth-of-type(2), .grid2 i:nth-of-type(2) {
+    transform: rotateY(0deg) translateZ(-60px); /* Increased translateZ */
+    transform-origin: bottom;
+    background: #7dc0a2;
+    width: 100%;
+}
+
+.grid i:nth-of-type(3), .grid2 i:nth-of-type(3) {
+    transform: rotateX(90deg) translateY(-60px); /* Increased translateY */
+    transform-origin: top right;
+    background: #343a8f;
+    width: 100%;
+    height: 60px; /* Increased height */
+}
+
+.grid i:nth-of-type(4), .grid2 i:nth-of-type(4) {
+    transform: rotateY(90deg) translateZ(25px); /* Increased translateZ */
+    transform-origin: left;
+    background: #343a8f;
+}
+
+.grid i:nth-of-type(5), .grid2 i:nth-of-type(5) {
+    transform: rotateX(90deg) translateZ(-25px) translateY(-60px); /* Adjusted for increased size */
+    transform-origin: top;
+    background: #7dc0a2;
+    width: 100%;
+    height: 60px; /* Increased height */
+}
+
+.counterContainer {
+    position: absolute;
+    top: 15px; /* Adjusted position for larger container */
+    left: 15px; /* Adjusted position for larger container */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 7px; /* Adjusted padding for larger container */
+    border-radius: 5px;
+}
+
+.allBoxesCounter {
+    position: fixed;
+    top: 50%;
+    right: 15px; /* Adjusted position for larger container */
+    transform: translateY(-50%);
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #FFA07A);
+    padding: 15px; /* Adjusted padding for larger container */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Adjusted font size for larger container */
+    text-align: center;
+}
+
+.allBoxesCounter h2 {
+    margin-bottom: 7px; /* Adjusted margin for larger container */
+}
+
+.allBoxesCounter p {
+    font-size: 20px; /* Adjusted font size for larger container */
+    font-weight: bold;
+}

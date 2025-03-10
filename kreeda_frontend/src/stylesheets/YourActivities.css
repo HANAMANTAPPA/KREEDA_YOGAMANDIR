@@ -1,0 +1,133 @@
+.your-activities {
+    width: 85%;
+    height:35vh;
+    margin: 0 7%;
+    border: 1px solid #666;
+    border-radius: 16px;
+    padding: 10px 20px;
+    color: #FFF;
+    font-family: Roboto, sans-serif;
+    overflow: hidden;
+}
+
+.your-activities h2 {
+    font-family: 'Poppins',sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 2%;
+}
+
+.activities-scroll {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    height:65%;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scroll effect */
+    padding-bottom: 10px;
+}
+.activities-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.activities-scroll {
+    -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer/Edge */
+    scrollbar-width: none;  /* Hide scrollbar in Firefox */
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activity img {
+    width: auto;
+    height: 70%;
+    border-radius: 8px;
+}
+
+.activity-title {
+    color: #FFF;
+    font-family: var(--Title-Small-Font, Roboto);
+    font-size: var(--Title-Small-Size, 14px);
+    margin-top: 1%;
+}
+
+.activity-updated {
+    color: #BDBDBD;
+    font-family: var(--Body-Small-Font, Roboto);
+    font-size: var(--Body-Small-Size, 12px);
+    margin-top: 0px;
+}
+
+.activities-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activities-info {
+    font-family: 'Poppins',sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.start-button {
+    background-color: #6966FF;
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width:10%;
+}
+
+.start-button:hover {
+    background-color: #5753d6;
+}
+
+.play-icon {
+    width: 30%;
+    height: auto;
+}
+
+/* Enable scrolling on smaller screens only */
+@media (max-width: 768px) {
+    .activities-scroll {
+        overflow-x: auto; /* Allows scrolling only on small screens */
+    }
+
+    /* Hide the scrollbar completely for small screens */
+    .activities-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    .activities-scroll {
+        -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer/Edge */
+        scrollbar-width: none;  /* Hide scrollbar in Firefox */
+    }
+}
+@media (min-width:1920px){
+    .your-activities h2 {
+        font-size:1.6rem;
+    }
+    .activity-title {
+        font-size:1.2rem;
+        margin-top:2%;
+    }
+    .activities-info{
+        font-size: 1.4rem;
+    }
+    .start-button{
+        font-size:1.3rem;
+    }
+}

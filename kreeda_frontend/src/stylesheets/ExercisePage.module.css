@@ -1,0 +1,307 @@
+.exercisePageContainer {
+  background-color: #222;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.exercisePageContent {
+  width: 80%;
+  margin-left: 17%;
+  padding: 20px;
+}
+
+/* Typography for Heading and Subheading */
+.exerciseHeading {
+  font-family: 'Poppins',sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.exerciseSubheading {
+  font-family: 'Poppins',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #b4b4b4;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+}
+
+/* User Info */
+.userInfo img {
+  width: 40px;
+  height: 40px;
+}
+
+.userName {
+  font-family: 'Poppins',sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.userDesignation {
+  font-family: 'Poppins',sans-serif;
+  font-size: 14px;
+  color: #b4b4b4;
+}
+
+.customSearchBar {
+  position: relative;
+  width: 300px; /* Adjust the width as needed */
+  height: 40px;
+  border-radius: 30px; /* This will give the rounded edges */
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.customSearchInput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 30px;
+  padding-left: 15px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.customSearchIcon {
+  position: absolute;
+  right: 10px; /* Place the icon inside the input field */
+  color: #6c757d;
+  cursor: pointer;
+}
+
+
+
+
+/* Filter Button Styling */
+.filterButton {
+  font-family: 'Poppins',sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  width: 140px;
+  height: 32px;
+  background-color: #F5F5F5;
+  color: #757575;
+  border: none;
+  border-radius: 16px;
+  margin-right:10px;
+}
+.filterButton:hover{
+  background-color: #f4eded;
+}
+
+.selected {
+  background-color: #6966FF;
+  color: #F5F5F5;
+}
+
+.tickMark {
+  margin-right: 8px;
+}
+
+/* Image Grid */
+.imageGrid {
+display: grid;
+/* grid-template-columns: repeat(7, 1fr); Force 7 images per row */
+grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+gap: 0; /* Eliminate gaps between the images */
+max-height: 64vh;
+overflow: auto; /* Allow scrolling if needed */
+margin-top: 2px;
+}
+
+/* Adjust the card style if needed */
+.imageCard {
+text-align: center;
+padding: 2px; /* Add some minimal padding if needed */
+}
+
+.image {
+width: 110px; /* Set to fill the available space */
+height: 95.12px; /* Keep the aspect ratio intact */
+border-radius: 16px; /* Rounded corners for images */
+cursor: pointer;
+}
+
+.imageTitle {
+font-family: 'Poppins',sans-serif;
+font-size: 14px;
+color: #ffffff;
+margin-top: 2px; /* Spacing between image and title */
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pageButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px; /* Rectangle shape with a bit of padding */
+  margin: 0 4px;
+  border: none;
+  border-radius: 8px; /* Slightly rounded edges */
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pageButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.activePage {
+  background-color: #404040; /* New background color for the selected page */
+  color: #ffffff;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  background-color: transparent; /* Same background for nav buttons */
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ellipsis {
+  color: #ffffff;
+  margin: 0 4px;
+}
+/* Add this to your ExercisePage.module.css */
+.filterIcon {
+font-size: 24px; /* Adjust icon size */
+cursor: pointer;
+color: #ffffff; /* Match the icon color */
+}
+
+.filterIcon.active {
+color: #6966FF; /* Change color when active */
+}
+
+@media (max-width: 768px) {
+.filterButton {
+  font-size: 12px; /* Smaller font size */
+  width: auto; /* Adjust width */
+  padding: 4px 8px; /* Adjust padding */
+}
+
+.customSearchBar {
+  width: 200px; /* Adjust search bar width */
+}
+}
+/* ExercisePage.module.css */
+
+.filterButtons {
+display: flex;
+flex-wrap: wrap; /* Ensure buttons wrap if space is limited */
+}
+
+@media (max-width: 768px) {
+.filterButtons {
+  display: none; /* Hide filter buttons on mobile */
+}
+
+.filterIcon {
+  display: block; /* Show filter icon on mobile */
+}
+}
+
+@media (min-width: 769px) {
+.filterIcon {
+  display: none; /* Hide filter icon on larger screens */
+}
+
+.filterButton {
+  height: 40px; /* Increase button height to accommodate text overflow */
+}
+}
+
+/* Dropdown for filters */
+.dropdown {
+display: flex;
+flex-direction: column;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 10px;
+}
+
+.radioLabel {
+font-family: 'Poppins', sans-serif;
+font-size: 14px;
+color: #222;
+margin: 5px 0;
+}
+
+.radioInput {
+margin-right: 10px;
+}
+
+/* Hide filter buttons on mobile screens */
+@media (max-width: 768px) {
+.filterButtons {
+  display: none; /* Hide filter buttons */
+}
+}
+.filterIconContainer {
+position: relative; /* This will make the dropdown position relative to this container */
+z-index: 1; /* Ensure this is on top */
+}
+/* ExercisePage.module.css */
+
+/* Add this for the dropdown */
+.dropdown {
+position: absolute; /* Position it absolutely */
+top: 152px; /* Adjust based on the height of the filter icon */
+right: 0; /* Align to the right side of the filter icon */
+background-color: #fff; /* Dropdown background */
+border-radius: 8px; /* Rounded corners for dropdown */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+z-index: 1000; /* Ensure it is above the images */
+width: 150px; /* Adjust the width as needed */
+display: flex;
+flex-direction: column; /* Arrange labels in a column */
+}
+@media (min-width:768px){
+  .dropdown{
+    display:none;
+  }
+}
+.radioLabel {
+padding: 10px; /* Spacing inside each label */
+cursor: pointer; /* Pointer on hover */
+}
+
+.radioLabel:hover {
+background-color: #f5f5f5; /* Highlight on hover */
+}

@@ -1,0 +1,85 @@
+/* Hero Section Styling */
+/* Hero Section Background continues the same Mesh */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Full height */
+  background-color: #1E1E1E;
+  background-image: 
+      linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px), /* Horizontal mesh */
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px); /* Vertical mesh */
+  background-size: 20px 20px; /* Adjust grid size */
+  color: white;
+  text-align: center;
+}
+
+.hero-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Abril Fatface';
+}
+
+.btn-powered-by-ai {
+  background-color: #303040; /* Updated background color */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px; /* Updated border radius */
+  padding: 12px 24px; /* Updated padding */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Abril Fatface';
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Updated gap */
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Hero Section Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px; /* Match the gap with the navbar buttons */
+}
+
+.hero-buttons .btn {
+  border-radius: 25px;
+  height: 51px;
+  padding: 16px 32px;
+  font-size: 1rem;
+  color: white;
+  border: 2px solid white;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.hero-buttons .btn-sign-up {
+  background: transparent;
+  padding: 10px 20px; /* Adjust padding to keep text in one line */
+}
+
+.hero-buttons .btn-join-now {
+  background-color: #6966FF;
+  border: none;
+  padding: 16px 32px; /* Keep padding as it was */
+}
+
+/* Hover states to fix the outline and background issues */
+.hero-buttons .btn-sign-up:hover {
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.hero-buttons .btn-join-now:hover {
+  background-color: #4f4ccc;
+  color: white;
+}
+@media (max-width: 992px) {
+  .hero-section {
+    height:70vh;
+  }
+}

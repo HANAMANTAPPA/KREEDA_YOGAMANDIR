@@ -1,0 +1,138 @@
+/* Navbar Styling */
+.navbar {
+  height: 15vh; /* Increase the height of the navbar */
+  max-width:100vw;
+  background-color: #1E1E1E;
+  background-image: 
+      linear-gradient(0deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px), /* Horizontal mesh */
+      linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px); /* Vertical mesh */
+  background-size: 20px 20px; /* Adjust grid size */
+}
+
+/* Styling for the logo */
+.logo {
+  height: 50px;
+  aspect-ratio: 500/194;
+  padding: 3px 4px 3.9px 4px;
+  gap: 0px;
+  opacity: 1; /* Logo is visible */
+}
+
+/* Custom styles for each link */
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s ease-in-out;
+  padding: 12px 0px 12px 16px;
+}
+
+/* Custom width and height for each link */
+.navbar-nav .nav-link:nth-child(1) { /* Home */
+  width: 81px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.navbar-nav .nav-link:nth-child(2) { /* Fitness */
+  width: 90px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.navbar-nav .nav-link:nth-child(3) { /* Pricing */
+  width: 89px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.navbar-nav .nav-link:nth-child(4) { /* About */
+  width: 82px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+/* When a link is active, set the background color */
+.navbar-nav .nav-link.active {
+  background-color: #4F4C64;
+}
+
+/* Hover state to make links more interactive */
+.navbar-nav .nav-link:hover {
+  background-color: #4F4C64;
+  color: #fff;
+}
+
+/* Button styles */
+.btnsCont {
+  border-radius: 25px;
+  height: 51px;
+  padding: 16px 32px;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: #FFFFFF;
+  text-decoration: none !important;
+  text-align: center;
+}
+
+.btn-sign-up {
+  border: 2px solid #FFFFFF;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+.btn-sign-up:hover{
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.btn-join-now {
+  width: 149px;
+  background-color: #6966FF;
+  border: none; 
+}
+.btn-join-now:hover {
+  background-color: #4f4ccc;
+  color: white;
+}
+/* Spacing between buttons */
+.d-flex {
+  gap: 24px;
+ /* Adds space between the links and buttons */
+}
+
+/* Keep the original desktop styles as they are */
+.navbar-collapse {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-left:200px;
+}
+
+/* Background color for the collapsed navbar only in mobile view */
+@media (max-width: 992px) {
+  .navbar-nav .nav-link {
+    justify-content: left;
+  }
+  .navbar-collapse {
+    background-color: #1E1E1E; /* Apply background color in mobile view */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Stack the buttons vertically in the collapsed menu */
+  .buttons-collapse {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .buttons-collapse .btnsCont {
+    text-align: center;
+    width: 150px;
+  }
+  .btn-sign-up{
+    justify-content: center;
+  }
+}

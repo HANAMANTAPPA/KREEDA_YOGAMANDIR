@@ -1,0 +1,65 @@
+.features-section {
+  background-color: #1E1E1E;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.features-heading {
+  color: #ffffff;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: 'Abril Fatface', serif;
+}
+
+.features-subheading {
+  color: #efede8a6;
+  text-align: center;
+  font-family:Poppins;
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Ensures equal width for all columns */
+  grid-template-rows: repeat(2, auto); /* Two rows */
+  gap: 10px; /* Set minimal gap between the boxes */
+}
+
+.column-left, .column-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* Ensures two equal-height boxes on left and right */
+}
+
+.column-center {
+  grid-row: span 2; /* Center box spans both rows */
+}
+
+.column-center .feature-card {
+  height: 95%; /* Large box takes full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+  .features-section{
+    padding: 60px 10px;
+  }
+  .features-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the minimum height as needed */
+  }
+
+  .column-left, .column-right, .column-center {
+    display: block; /* Remove column classes and use block for vertical stacking */
+  }
+  .features-heading{
+    font-size: 30px;
+  }
+  .features-subheading {
+    font-size:18px;
+  }
+}
