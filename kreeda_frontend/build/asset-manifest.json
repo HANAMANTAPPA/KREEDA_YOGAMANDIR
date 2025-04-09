@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ecfb49a5.css",
-    "main.js": "/static/js/main.f9c6bbc2.js",
+    "main.css": "/static/css/main.46f6f391.css",
+    "main.js": "/static/js/main.23723f07.js",
     "static/js/453.9e6ebf7a.chunk.js": "/static/js/453.9e6ebf7a.chunk.js",
     "static/media/lie-ups.gif": "/static/media/lie-ups.7c7b3f6254eeaf8787c3.gif",
     "static/media/leg_lowers.gif": "/static/media/leg_lowers.181fa2ea01d1a9fd8119.gif",
@@ -92,12 +92,12 @@
     "static/media/PRO.png": "/static/media/PRO.002f9915d1b7bf3727af.png",
     "static/media/Exercise1.jpg": "/static/media/Exercise1.2760e0fceb23b943dcdc.jpg",
     "index.html": "/index.html",
-    "main.ecfb49a5.css.map": "/static/css/main.ecfb49a5.css.map",
-    "main.f9c6bbc2.js.map": "/static/js/main.f9c6bbc2.js.map",
+    "main.46f6f391.css.map": "/static/css/main.46f6f391.css.map",
+    "main.23723f07.js.map": "/static/js/main.23723f07.js.map",
     "453.9e6ebf7a.chunk.js.map": "/static/js/453.9e6ebf7a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ecfb49a5.css",
-    "static/js/main.f9c6bbc2.js"
+    "static/css/main.46f6f391.css",
+    "static/js/main.23723f07.js"
   ]
 }
